@@ -29,7 +29,7 @@ export default function Navbar() {
       </div>
 
       {/* Middle: Links */}
-      <nav className="flex space-x-6">
+      <nav className="md:flex hidden space-x-6">
         {pages.map((page) => (
           <Link 
             key={page.id} 

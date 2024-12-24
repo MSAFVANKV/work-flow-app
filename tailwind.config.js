@@ -9,6 +9,9 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+		  backgroundImage: {
+			'custom-gradient': 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,22,22,1) 100%)',
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

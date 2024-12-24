@@ -1,44 +1,57 @@
+import ScrollBanner from "@/components/landings/Home/ScrollBanners/ScrollBanner";
 import SearchBar from "@/components/Search/Search_Bar";
 import { Icon } from "@iconify/react";
 
 export default function HomePage() {
   return (
-    <div className="p-4 max-w-screen-2xl mx-auto space-y-3">
+    <div className=" mx-auto space-y-3">
       {/* search bar */}
       <div className="">
         <SearchBar />
       </div>
 
       <div className="snap-y relative snap-mandatory rounded-2xl h-[40vh] border overflow-y-scroll bg-gray-300 scrollbar-none">
-        <div className="snap-start h-full border p-10 flex justify-center bg-gradient">
-          <div className="flex flex-col items-center justify-around">
-            <h1 className="text-black font-bold font-mono text-3xl">
-              Upload Your Images
-            </h1>
-            <span>Keep Your images as privet and public</span>
+        <div className="snap-start min-h-[40vh]  p-10 flex justify-center bg-gradient">
+         <ScrollBanner
+         titleClass=""
+         className=""
+         title="Upload Your Images "
+         description="Keep Your images as privet and public"
+         images={[
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+         ]}
 
-            {/* images === */}
-            <div className="flex gap-4">
-              {[
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-                "https://via.placeholder.com/150",
-              ].map((items) => (
-                <div className="">
-                  <div className="w-[100px] h-[100px] rounded-sm overflow-hidden relative">
-                    <img src={items} alt="" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+         />
         </div>
-        <div className="snap-start h-full bg-green-200 border p-10 flex items-center justify-center">
-          Section 2
+        <div className="snap-start min-h-[40vh] bg-custom-gradient  p-10 flex items-center justify-center">
+        <ScrollBanner
+         title="Upload Your Videos "
+          titleClass="text-white"
+         description="Keep Your Videos as privet and public"
+         images={[
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+         ]}
+
+         />
         </div>
-        <div className="snap-start h-full bg-blue-200 border p-10 flex items-center justify-center">
-          Section 3
+        <div className="snap-start min-h-[40vh] bg-gradient  p-10 flex items-center justify-center">
+        <ScrollBanner
+         title="Upload Your Audios "
+         description="Create Your Own Music And Upload For free"
+         images={[
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+         ]}
+
+         />
         </div>
 
         {/* Add relative positioning to the parent */}
